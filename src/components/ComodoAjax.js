@@ -6,7 +6,7 @@ export let DataStore = {
   scope:'application'
 };
 
-export class Comodo {
+export class ComodoAjax {
   /**
    *
    * @param url
