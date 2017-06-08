@@ -43,6 +43,6 @@ export class ComodoAjax {
           DataStore = rootNode;
         }
       }
-    })
+    });
   }
 }

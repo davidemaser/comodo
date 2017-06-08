@@ -22,6 +22,10 @@ class ComodoParser{
   digest(data,map){
 
   }
+
+  regurgitate(){
+
+  }
 }
 
 export default ComodoParser;
