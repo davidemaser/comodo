@@ -2,6 +2,11 @@ let webpack = require('webpack');
 let HtmlWebPackPlugin = require('html-webpack-plugin');
 module.exports = {
   entry: "./app.js",
+  watch:true,
+  watchOptions: {
+    aggregateTimeout: 500,
+    poll: 1000
+  },
   output: {
     path: __dirname + "/dist",
     filename: "bundle.js"
@@ -27,17 +32,21 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        use:[{
-          loader: "style-loader" // creates style nodes from JS strings
-        }, {
-          loader: "css-loader" // translates CSS into CommonJS
-        }, {
-          loader: "sass-loader", // compiles Sass to CSS
-          options: {
-            includePaths: ["src/scss","src/styles"],
-            outputStyle: 'compressed'
+        use:[
+          {
+            loader: "style-loader"
+          },
+          {
+            loader: "css-loader"
+          },
+          {
+            loader: "sass-loader",
+            options: {
+              includePaths: ["src/scss","src/styles"],
+              outputStyle: 'compressed'
+            }
           }
-        }]
+        ]
       }
     ]
   },
