@@ -2,6 +2,7 @@
  * Created by David Maser on 08/06/2017.
  */
 import {Global} from '../config/global';
+import '../components/ComodoParser';
 export let DataStore = {
   scope:'application'
 };
