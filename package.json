@@ -1,0 +1,25 @@
+{
+  "name": "comodo",
+  "version": "0.0.5",
+  "description": "Comodo is a jquery-webpack bundle project",
+  "main": "app.js",
+  "scripts": {
+    "start": "webpack --config webpack.config.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "David Maser",
+  "license": "MIT",
+  "devDependencies": {
+    "css-loader": "^0.28.4",
+    "csv-loader": "^2.1.1",
+    "file-loader": "^0.11.2",
+    "html-webpack-plugin": "^2.28.0",
+    "json-loader": "^0.5.4",
+    "style-loader": "^0.18.2",
+    "webpack": "^2.6.1",
+    "xml-loader": "^1.2.1"
+  },
+  "dependencies": {
+    "dsv-loader": "^2.0.0"
+  }
+}
