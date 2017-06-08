@@ -2,7 +2,7 @@
  * Created by David Maser on 08/06/2017.
  */
 import {ComodoAjax, DataStore} from './src/components/ComodoAjax';
-import {ComodoUtilities} from './src/utilities/ComodoUtilities';
+import {ComodoUtilities} from './src/components/ComodoUtilities';
 
 new ComodoAjax('demo', 'GET', 'some', (output) => {
   /*
