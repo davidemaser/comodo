@@ -19,7 +19,7 @@ class ComodoParser{
     }
   }
 
-  digest = (data,map) =>{
+  digest(data,map){
 
   }
 }

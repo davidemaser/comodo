@@ -3,6 +3,7 @@
  */
 import {ComodoAjax, DataStore} from './src/components/ComodoAjax';
 import {ComodoUtilities} from './src/components/ComodoUtilities';
+import './src/scss/app.scss';
 
 new ComodoAjax('demo', 'GET', 'some', (output) => {
   /*

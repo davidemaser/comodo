@@ -11,12 +11,32 @@ module.exports = {
       {
         test:/\.json$/,
         use:'json-loader'
-      }
-    ],
-    loaders:[
+      },
+      {
+        test: /\.txt$/,
+        use: 'raw-loader'
+      },
       {
         test: /\.csv$/,
-        loader: 'dsv-loader'
+        use: 'dsv-loader'
+      },
+      {
+        test: /\.gz$/,
+        enforce: 'pre',
+        use: 'gzip-loader'
+      },
+      {
+        test: /\.scss$/,
+        use:[{
+          loader: "style-loader" // creates style nodes from JS strings
+        }, {
+          loader: "css-loader" // translates CSS into CommonJS
+        }, {
+          loader: "sass-loader", // compiles Sass to CSS
+          options: {
+            includePaths: ["src/scss","src/styles"]
+          }
+        }]
       }
     ]
   },
