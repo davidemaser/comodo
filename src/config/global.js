@@ -4,3 +4,5 @@ export const Global = {
     ext:'.json'
   }
 };
+
+export const Structure = ['haha','eeeje','aewerqw'];

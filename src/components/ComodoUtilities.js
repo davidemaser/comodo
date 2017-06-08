@@ -2,9 +2,6 @@
  * Created by David Maser on 08/06/2017.
  */
 export const ComodoUtilities = {
-  bind: (args) => {
-
-  },
   swap: (args) => {
 
   },
@@ -20,14 +17,19 @@ export const ComodoUtilities = {
      * {origin:'',destination:''}
      */
   },
-  remove: (obj) => {
-    if(Array.isArray(obj)){
-      let o;
-      for(o in obj){
-        $(obj[o]).remove();
+  remove:{
+    object: (obj) => {
+      if(Array.isArray(obj)){
+        let o;
+        for(o in obj){
+          $(obj[o]).remove();
+        }
+      }else{
+        $(obj).remove();
       }
-    }else{
-      $(obj).remove();
+    },
+    string: (str) => {
+
     }
   },
   bind: (args) => {
@@ -41,5 +43,10 @@ export const ComodoUtilities = {
      * args format is
      * {origin:'',destination:''}
      */
+  },
+  map: (obj) => {
+    obj.map(function(a){
+      console.log(a);
+    })
   }
 };

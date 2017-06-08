@@ -17,8 +17,8 @@ export class ComodoAjax {
    */
   constructor(url,method,name,callback){
     this.url = Global.json.route+url+Global.json.ext;
-    this.method = method;
-    this.name = name || 'default';
+    this.method = method || 'GET';
+    this.name = name;
     this.callback = callback;
     this.get();
   }
@@ -29,13 +29,19 @@ export class ComodoAjax {
       url:this.url,
       method:this.method,
       success:(data)=>{
-        this.callback(data);
+        let rootNode = objNode !== undefined ? data[objNode] : data;
+        this.callback !== undefined ? this.callback(rootNode) : null;
       },
       error:(xhr)=>{
-        this.callback('error',xhr);
+        this.callback !== undefined ? this.callback('error',xhr) : null;
       },
       complete:(data)=>{
-        DataStore[objNode] = data;
+        let rootNode = objNode !== undefined ? data['responseJSON'][objNode] : data['responseJSON'];
+        if(objNode !== undefined){
+          DataStore[objNode] = rootNode;
+        }else{
+          DataStore = rootNode;
+        }
       }
     })
   }

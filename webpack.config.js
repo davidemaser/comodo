@@ -34,7 +34,8 @@ module.exports = {
         }, {
           loader: "sass-loader", // compiles Sass to CSS
           options: {
-            includePaths: ["src/scss","src/styles"]
+            includePaths: ["src/scss","src/styles"],
+            outputStyle: 'compressed'
           }
         }]
       }
