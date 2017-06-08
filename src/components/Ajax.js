@@ -5,7 +5,15 @@ import {Global} from '../config/global';
 export let DataStore = {
   scope:'application'
 };
-export class Ajax {
+
+export class Comodo {
+  /**
+   *
+   * @param url
+   * @param method
+   * @param name
+   * @param callback
+   */
   constructor(url,method,name,callback){
     this.url = Global.json.route+url+Global.json.ext;
     this.method = method;

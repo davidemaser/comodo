@@ -4,8 +4,7 @@
   "description": "Comodo is a jquery-webpack bundle project",
   "main": "app.js",
   "scripts": {
-    "start": "webpack --config webpack.config.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "webpack --config webpack.config.js"
   },
   "author": "David Maser",
   "license": "MIT",
@@ -21,5 +20,9 @@
   },
   "dependencies": {
     "dsv-loader": "^2.0.0"
+  },
+  "repository" : {
+    "type":"git",
+    "url":"https://github.com/davidemaser/comodo.git"
   }
 }
